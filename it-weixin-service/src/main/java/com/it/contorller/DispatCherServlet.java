@@ -56,7 +56,7 @@ public class DispatCherServlet {
                 textMessage.setFromUserName(toUserName);
                 textMessage.setCreateTime(System.currentTimeMillis());
                 textMessage.setMsgType("text");
-                if ("你好".equals(content.substring(0,content.length()-1))) {
+                if ("你好".equals(content)) {
 
                     textMessage.setContent("你也好~~~");
                 } else {
@@ -75,7 +75,7 @@ public class DispatCherServlet {
                 textMessageVoice.setFromUserName(toUserName);
                 textMessageVoice.setCreateTime(System.currentTimeMillis());
                 textMessageVoice.setMsgType("text");
-                if ("你好。".equals(recognition)) {
+                if ("你好".equals(recognition.substring(0,recognition.length()-1))) {
 
                     textMessageVoice.setContent("瞎BB什么~~~");
                 } else {
